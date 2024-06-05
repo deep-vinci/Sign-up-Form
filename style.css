@@ -62,3 +62,8 @@ isolation: isolate;
     display: flex;
     flex-direction: column;
 }
+
+.input-elem {
+    display: flex;
+    flex-direction: rpw;
+}
