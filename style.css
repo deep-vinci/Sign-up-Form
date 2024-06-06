@@ -25,10 +25,17 @@ overflow-wrap: break-word;
 #root, #__next {
 isolation: isolate;
 }
-  
+
+@font-face {
+    font-family: "Norse Bold";
+    font-weight: bold;
+    src: url("assets/Norse-Bold.otf") format("opentype");
+}
+
 :root {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 .container {
     display: flex;
@@ -40,6 +47,21 @@ isolation: isolate;
 .image {
     background: url("assets/halie-west-25xggax4bSA-unsplash.jpg") 0px 0px/cover no-repeat;
     width: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit {
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: small;
+    padding: 0 0 0.5rem 0;
+}
+
+.credit a:link, a:visited {
+    color: white;
 }
 
 .overlay {
@@ -49,16 +71,19 @@ isolation: isolate;
     position: relative;
     top: 25vh;
     color: white;
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Norse Bold";
 }
 
 
 .overlay .logo {
     width: 5vw;
+
+
 }
 
 .headings {
@@ -112,6 +137,7 @@ input {
     border: 1px solid #E5E7EB;
     padding: 6px;
     border-radius: 7px;
+    outline: none;
 }
 
 form button {
@@ -141,6 +167,11 @@ fieldset > legend {
     color: #596D48;
     text-decoration: none;
     font-weight: bold;
+}
+
+input:focus {
+    border: 2px solid rgb(0, 0, 179);
+    box-shadow: 1px 1px 5px rgb(206, 206, 206);
 }
 
 #password:invalid {
